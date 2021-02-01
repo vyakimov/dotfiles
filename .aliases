@@ -1,0 +1,5 @@
+alias l='ls -lsahtr --color=yes'
+alias snflks='source activate snowflakes && export HOST=$(hostname)'
+alias dsrt='source activate desert && export HOST=$(hostname)'
+alias r=radian
+alias snkmk=nice snakemake -j 18 --use-conda --resources mem_gb=200
