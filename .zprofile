@@ -1,25 +1,6 @@
-# .bash_profile
-
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-if [ -f ~/.aliases ]; then
-	. ~/.aliases
-fi
-
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
+# start ssh agent
 SSH_ENV="$HOME/.ssh/agent-environment"
 
-# start ssh-agent so that we don't have to re-enter key pass phrases
-# see https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login
 function start_agent {
     echo "Initialising new SSH agent..."
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
