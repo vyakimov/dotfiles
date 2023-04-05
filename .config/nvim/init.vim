@@ -19,6 +19,7 @@ noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
 imap jj <Esc> 
+inoremap <C-d> <Esc>
 
 call plug#begin('~/.vim/plugged')
 Plug 'ncm2/ncm2'
