@@ -69,7 +69,8 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-vim-mode)
+VIM_MODE_VICMD_KEY='^D'
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
@@ -102,3 +103,20 @@ export LC_CTYPE=en_US.UTF-8
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 source ~/.iterm2_shell_integration.zsh
+
+### BINDINGS
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey ^R history-incremental-search-backward
+bindkey "\e[A" history-beginning-search-backward
+bindkey "\e[B" history-beginning-search-forward
+
+##### HISTORY  
+HISTFILE=~/.zsh_history  
+HISTSIZE=100000000  
+SAVEHIST=100000000  
+setopt INC_APPEND_HISTORY  
+setopt HIST_FIND_NO_DUPS  
+setopt HIST_IGNORE_DUPS
