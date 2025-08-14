@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -129,3 +129,10 @@ SAVEHIST=100000000
 setopt INC_APPEND_HISTORY  
 setopt HIST_FIND_NO_DUPS  
 setopt HIST_IGNORE_DUPS
+# export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init - zsh)"
+#alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+#eval "$(pyenv virtualenv-init -)"
+
+. "$HOME/.local/bin/env"
