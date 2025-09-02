@@ -133,4 +133,4 @@ setopt HIST_IGNORE_DUPS
 #alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 #eval "$(pyenv virtualenv-init -)"
 
-. "$HOME/.local/bin/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
